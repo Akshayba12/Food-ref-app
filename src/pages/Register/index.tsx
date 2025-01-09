@@ -1,6 +1,10 @@
 import { View, Text, StyleSheet, TouchableOpacity, TextInput, Image } from 'react-native';
 import React from 'react';
 import bannerImage from '../../assets/bannerimg.jpg';
+import { FontAwesomeIcon } from '@fortawesome/react-native-fontawesome';
+import { faCalendar, faEnvelope, faLock, faUser} from '@fortawesome/free-solid-svg-icons';
+import { faFacebook, faTwitter } from '@fortawesome/free-brands-svg-icons';
+import gooleImage from '../../assets/google.png';
 
 
 const Register = () => {
@@ -9,33 +13,37 @@ const Register = () => {
         <View style={styles.bannerImageContainer}>
             <Image style={styles.imageStyle} source={bannerImage} />
         </View>
-      <Text style={styles.registerText}>Register</Text>
       <View style={styles.socialMedia}>
         <TouchableOpacity style={styles.socialMediaBtn}>
-            <Text>Google</Text>
+        <Image source={gooleImage} style={styles.googleImageStyle} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.socialMediaBtn}>
-            <Text>Facebook</Text>
+        <FontAwesomeIcon icon={faFacebook} color="#0047AB" size={30} style={styles.iconStyle} />
         </TouchableOpacity>
         <TouchableOpacity style={styles.socialMediaBtn}>
-            <Text>Twitter</Text>
+        <FontAwesomeIcon icon={faTwitter} color="#87CEEB" size={30} style={styles.iconStyle} />
         </TouchableOpacity>
       </View>
         <Text style={styles.emailText}>or, register with email...</Text>
         <View style={styles.inputContainerStyle}>
             <View style={styles.placeholderStyle}>
+               <FontAwesomeIcon icon={faUser} style={styles.iconStyle} />
                 <TextInput placeholder="Full Name" placeholderTextColor="gray" style={styles.textinputStyle} />
             </View>
             <View style={styles.placeholderStyle}>
+            <FontAwesomeIcon icon={faEnvelope} style={styles.iconStyle} />
                 <TextInput placeholder="Email ID"  style={styles.textinputStyle}/>
             </View>
             <View style={styles.placeholderStyle}>
+            <FontAwesomeIcon icon={faLock} style={styles.iconStyle} />
                 <TextInput placeholder="Password"  style={styles.textinputStyle}/>
             </View>
             <View style={styles.placeholderStyle}>
-                <TextInput placeholder="confirm Password" style={styles.textinputStyle} />
+            <FontAwesomeIcon icon={faLock} style={styles.iconStyle} />
+                <TextInput placeholder="Confirm Password" style={styles.textinputStyle} />
             </View>
             <View style={styles.placeholderStyle}>
+            <FontAwesomeIcon icon={faCalendar} style={styles.iconStyle} />
                 <TextInput placeholder="Date of Birth" style={styles.textinputStyle} />
             </View>
         </View>
@@ -64,7 +72,7 @@ const styles = StyleSheet.create({
       alignItems:'center',
     },
     imageStyle:{
-      height: 240,
+      height: 250,
       width: 350,
       marginVertical:14,
     },
@@ -101,11 +109,12 @@ const styles = StyleSheet.create({
         borderBottomWidth:1.5,
         borderBottomColor:'#D3D3D3',
         marginTop:10,
+        flexDirection:'row',
 
     },
    textinputStyle:{
-      fontSize:18,
-      color:'#D3D3D3',
+      fontSize:16,
+      color:'black',
    },
     inputContainerStyle:{
         marginVertical:0,
@@ -138,4 +147,11 @@ const styles = StyleSheet.create({
         marginHorizontal:5,
         color:'#9F2B68',
     },
+    googleImageStyle:{
+        height:35,
+        width:35,
+    },
+    iconStyle:{
+        alignSelf:'center'
+    }
 });

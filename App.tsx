@@ -6,17 +6,14 @@
  */
 
 import React from 'react';
-import {
-} from 'react-native';
+import {Text, View} from 'react-native';
 import Navigation from './src/navigation';
+import Login from './src/pages/Login';
+import Home from './src/pages/Home';
 import Register from './src/pages/Register';
 
-
-function App(): React.JSX.Element {
-
-  return (
-    <Register />
-  );
+function App() {
+  return <Register />;
 }
 
 export default App;
