@@ -6,14 +6,15 @@
  */
 
 import React from 'react';
-import {Text, View} from 'react-native';
 import Navigation from './src/navigation';
-import Login from './src/pages/Login';
-import Home from './src/pages/Home';
-import Register from './src/pages/Register';
+import {NavigationContainer} from '@react-navigation/native';
 
 function App() {
-  return <Register />;
+  return (
+    <NavigationContainer>
+      <Navigation />;
+    </NavigationContainer>
+  );
 }
 
 export default App;
