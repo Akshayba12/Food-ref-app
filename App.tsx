@@ -6,16 +6,13 @@
  */
 
 import React from 'react';
-import {
-} from 'react-native';
+import {Text, View} from 'react-native';
 import Navigation from './src/navigation';
+import Login from './src/pages/Login';
+import Home from './src/pages/Home';
 
-
-function App(): React.JSX.Element {
-
-  return (
-    <Navigation />
-  );
+function App() {
+  return <Login />;
 }
 
 export default App;
