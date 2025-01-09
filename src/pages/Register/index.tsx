@@ -39,6 +39,15 @@ const Register = () => {
                 <TextInput placeholder="Date of Birth" style={styles.textinputStyle} />
             </View>
         </View>
+         <TouchableOpacity style={styles.registerBtn}>
+            <Text style={styles.registerbtntxt}>Register</Text>
+         </TouchableOpacity>
+         <View style={styles.backToLoginoption}>
+         <Text style={styles.backToLoginoptionTxt}>Already have an account?,</Text>
+         <TouchableOpacity>
+            <Text style={styles.LoginTxt}>Login</Text>
+         </TouchableOpacity>
+         </View>
     </View>
   );
 };
@@ -55,8 +64,9 @@ const styles = StyleSheet.create({
       alignItems:'center',
     },
     imageStyle:{
-      height: 350,
+      height: 240,
       width: 350,
+      marginVertical:14,
     },
     registerText:{
         fontSize: 32,
@@ -98,6 +108,34 @@ const styles = StyleSheet.create({
       color:'#D3D3D3',
    },
     inputContainerStyle:{
-        marginTop:10,
+        marginVertical:0,
+    },
+    registerBtn:{
+        height:62,
+        width:'100%',
+        justifyContent:'center',
+        backgroundColor:'#9F2B68',
+        marginVertical: 10,
+        borderRadius:10,
+    },
+    registerbtntxt:{
+        textAlign:'center',
+        fontSize:18,
+        fontWeight:'500',
+        color:'#ffff',
+    },
+    backToLoginoption:{
+        alignItems:'center',
+        flexDirection:'row',
+        justifyContent:'center',
+        height:28,
+    },
+    backToLoginoptionTxt:{
+        textAlign:'center',
+    },
+    LoginTxt:{
+        textAlign:'center',
+        marginHorizontal:5,
+        color:'#9F2B68',
     },
 });
