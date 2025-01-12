@@ -29,7 +29,7 @@ const Login = () => {
           <FontAwesomeIcon icon={faLock} style={styles.iconStyle} />
           <TextInput placeholder="Password" style={styles.inputPass} />
         </View>
-        <TouchableOpacity>
+        <TouchableOpacity onPress={() => navigation.navigate('forgotPassword')}>
           <Text>Forgot?</Text>
         </TouchableOpacity>
       </View>
